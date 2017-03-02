@@ -1,24 +1,87 @@
-;; db.ffcux
-;; Forwardlookupzone für ffcux
-;;
-$TTL 2D
-@       IN      SOA     ffcux. mail.domainname. (
-                                4       ; Serial
-                                8H      ; Refresh
-                                2H      ; Retry
-                                4W      ; Expire
-                                3H )    ; NX (TTL Negativ Cache)
+$TTL 86400
+$ORIGIN ffcux.
+@                                 IN        SOA   gw01
+                                  IN        NS	  gw02
+                                  IN        NS    gw03
+                                  IN        NS    gw04
+                                  IN        NS    gw05
 
-@                               IN      NS      service.ffcux.
-;                               IN      MX      10 mailserver.domainname.
-				IN	A       10.115.0.1 ;; Eigene IP
 
-gw1	                        IN	A	10.115.0.1
+; ##### GWs
+gw01                    86400     IN        A     10.115.0.1
+                                            AAAA  fdec:c0f1:afda::ff01
+gw02                    86400     IN        A     10.115.0.2
+                                            AAAA  fdec:c0f1:afda::ff02
+gw03                    86400     IN        A     10.115.0.3
+                                            AAAA  fdec:c0f1:afda::ff03
+gw04                    86400     IN        A     10.115.0.4
+                                            AAAA  fdec:c0f1:afda::ff04
+gw05                    86400     IN        A     10.115.0.5
+                                            AAAA  fdec:c0f1:afda::ff05
 
-gw2				IN	A	10.115.0.2
 
-gw3				IN	A	10.115.0.3
+; ##### service.ffcux.de
+service                 86400     IN        A     10.115.31.254
+                                            AAAA  fdec:c0f1:afda:0000:ffff:ffff:ffff:ffff
+redmine                 86400     IN        CNAME service
+updates      		86400     IN        CNAME service
+status                  86400     IN        CNAME service
+wiki                    86400     IN        CNAME service
+www.wiki                86400     IN        CNAME service
+map                     86400     IN        CNAME service
+git                     86400     IN        CNAME service
+graph                   86400     IN        CNAME service
+gluon                   86400     IN        CNAME service
+www.gluon               86400     IN        CNAME service
+debian                  86400     IN        CNAME service
+monitoring              86400     IN        CNAME service
+smokeping               86400     IN        CNAME service
+www                     86400     IN        CNAME service
+; ##### Meshviewer
+mesh                    86400	  IN	    CNAME service
+mash                    86400	  IN   	    CNAME service
+www.mesh                86400     IN        CNAME service
+alfred                  86400     IN        CNAME service
+hopglass                86400     IN        CNAME service
 
-gw4				IN	A	10.115.0.4
+; ##### Verlaeufe
+grafana                 86400     IN        CNAME service
 
-gw5				IN	A	10.115.0.5
+
+; ##### buildserver
+firmware                86400     IN        CNAME service
+; ##### NTP
+ntp.services            86400     IN        CNAME gw01
+                                            CNAME gw02
+                                            CNAME gw03
+                                            CNAME gw04
+                                            CNAME gw05
+
+
+
+
+; ##### OpenWrt Repos
+opkg.services           86400     IN        CNAME services
+repository              86400     IN        CNAME opkg.services
+
+; ##### Next-Node
+node                    86400     IN        A     10.115.31.254
+                                            AAAA  fdec:c0f1:afda::ffff
+local-node              86400     IN        CNAME node
+localnode               86400     IN        CNAME node
+next-node               86400     IN        CNAME node
+nextnode                86400     IN        CNAME node
+
+; ##### Nameserver
+ns1                     86400     IN        CNAME gw1
+ns2                     86400     IN        CNAME gw2
+ns3                     86400     IN        CNAME gw3
+ns4                     86400     IN        CNAME gw4
+ns5                     86400     IN        CNAME gw5
+
+
+; ##### PGP
+pgp                     86400     IN        CNAME service
+
+
+
