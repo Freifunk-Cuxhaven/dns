@@ -1,19 +1,19 @@
-;; 10.129.zone
+;; 10.115.zone
 ;; Reverselookupzone für domainname
 ;;
 $TTL 2D
-@       IN      SOA     snowden.fffl. mail.domainname. (
+@       IN      SOA     service.ffcux. mail.domainname. (
                                 	3      ; Serial
                                         8H      ; Refresh
                                         2H      ; Retry
                                         4W      ; Expire
                                         2D )    ; TTL Negative Cache
 
-@       IN      NS      snowden.fffl.
+@       IN      NS      service.ffcux.
 
 ; gateways
-1.1    	IN     	PTR   	snowden.fffl.
-2.1    	IN    	PTR   	gw02.fffl.
-3.1     IN      PTR     ffflgate.fffl.
-5.1     IN      PTR     gw01.fffl.
-15.1    IN      PTR     harrier.fffl.
+0.1    	IN     	PTR   	gw1.ffcux.
+0.2    	IN    	PTR   	gw2.ffcux.
+0.3     IN      PTR     gw3.ffcux.
+0.4     IN      PTR     gw4.ffcux.
+0.5     IN      PTR     gw5.ffcux.
