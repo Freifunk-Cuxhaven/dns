@@ -1,0 +1,24 @@
+;; db.ffcux
+;; Forwardlookupzone für ffcux
+;;
+$TTL 2D
+@       IN      SOA     ffcux. mail.domainname. (
+                                4       ; Serial
+                                8H      ; Refresh
+                                2H      ; Retry
+                                4W      ; Expire
+                                3H )    ; NX (TTL Negativ Cache)
+
+@                               IN      NS      service.ffcux.
+;                               IN      MX      10 mailserver.domainname.
+				IN	A       10.115.0.1 ;; Eigene IP
+
+gw1	                        IN	A	10.115.0.1
+
+gw2				IN	A	10.115.0.2
+
+gw3				IN	A	10.115.0.3
+
+gw4				IN	A	10.115.0.4
+
+gw5				IN	A	10.115.0.5
