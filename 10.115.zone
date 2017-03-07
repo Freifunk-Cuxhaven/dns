@@ -13,7 +13,7 @@ $TTL 2D
 
 ; gateways
 0.1    	IN     	PTR   	gw1.ffcux.
-0.2    	IN    	PTR   	gw2.ffcux.
-0.3     IN      PTR     gw3.ffcux.
-0.4     IN      PTR     gw4.ffcux.
-0.5     IN      PTR     gw5.ffcux.
+8.1   	IN    	PTR   	gw2.ffcux.
+15.1     IN      PTR     gw3.ffcux.
+22.1     IN      PTR     gw4.ffcux.
+29.1     IN      PTR     gw5.ffcux.
