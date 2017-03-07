@@ -10,13 +10,13 @@ $ORIGIN ffcux.
 ; ##### GWs
 gw01                    86400     IN        A     10.115.0.1
                                             AAAA  fdec:c0f1:afda::ff01
-gw02                    86400     IN        A     10.115.0.2
+gw02                    86400     IN        A     10.115.8.1
                                             AAAA  fdec:c0f1:afda::ff02
-gw03                    86400     IN        A     10.115.0.3
+gw03                    86400     IN        A     10.115.15.1
                                             AAAA  fdec:c0f1:afda::ff03
-gw04                    86400     IN        A     10.115.0.4
+gw04                    86400     IN        A     10.115.22.1
                                             AAAA  fdec:c0f1:afda::ff04
-gw05                    86400     IN        A     10.115.0.5
+gw05                    86400     IN        A     10.115.29.1
                                             AAAA  fdec:c0f1:afda::ff05
 
 
