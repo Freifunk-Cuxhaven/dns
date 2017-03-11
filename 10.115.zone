@@ -12,8 +12,13 @@ $TTL 2D
 @       IN      NS      service.ffcux.
 
 ; gateways
-0.1    	IN     	PTR   	gw1.ffcux.
-8.1   	IN    	PTR   	gw2.ffcux.
-15.1     IN      PTR     gw3.ffcux.
-22.1     IN      PTR     gw4.ffcux.
-29.1     IN      PTR     gw5.ffcux.
+0.1    	IN     	PTR   	gw01.ffcux.
+3.1   	IN    	PTR   	gw02.ffcux.
+6.1     IN      PTR     gw03.ffcux.
+9.1     IN      PTR     gw04.ffcux.
+12.1    IN      PTR     gw05.ffcux.
+15.1    IN      PTR     gw06.ffcux.
+18.1    IN      PTR     gw07.ffcux.
+21.1    IN      PTR     gw08.ffcux.
+24.1    IN      PTR     gw09.ffcux.
+27.1    IN      PTR     gw10.ffcux.
