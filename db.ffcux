@@ -10,21 +10,32 @@ $ORIGIN ffcux.
 ; ##### GWs
 gw01                    86400     IN        A     10.115.0.1
                                             AAAA  fdec:c0f1:afda::ff01
-gw02                    86400     IN        A     10.115.8.1
+gw02                    86400     IN        A     10.115.3.1
                                             AAAA  fdec:c0f1:afda::ff02
-gw03                    86400     IN        A     10.115.15.1
+gw03                    86400     IN        A     10.115.6.1
                                             AAAA  fdec:c0f1:afda::ff03
-gw04                    86400     IN        A     10.115.22.1
+gw04                    86400     IN        A     10.115.9.1
                                             AAAA  fdec:c0f1:afda::ff04
-gw05                    86400     IN        A     10.115.29.1
+gw05                    86400     IN        A     10.115.12.1
                                             AAAA  fdec:c0f1:afda::ff05
+gw06                    86400     IN        A     10.115.15.1
+                                            AAAA  fdec:c0f1:afda::ff06
+gw07                    86400     IN        A     10.115.18.1
+                                            AAAA  fdec:c0f1:afda::ff07
+gw08                    86400     IN        A     10.115.21.1
+                                            AAAA  fdec:c0f1:afda::ff08
+gw09                    86400     IN        A     10.115.24.1
+                                            AAAA  fdec:c0f1:afda::ff09
+gw10                    86400     IN        A     10.115.27.1
+                                            AAAA  fdec:c0f1:afda::ff10
+                                            
 
 
 ; ##### service.ffcux.de
-service                 86400     IN        A     10.115.31.254
+service                 86400     IN        A     10.115.31.1
                                             AAAA  fdec:c0f1:afda:0000:ffff:ffff:ffff:ffff
 redmine                 86400     IN        CNAME service
-updates      		86400     IN        CNAME service
+updates      		        86400     IN        CNAME service
 status                  86400     IN        CNAME service
 wiki                    86400     IN        CNAME service
 www.wiki                86400     IN        CNAME service
@@ -38,8 +49,8 @@ monitoring              86400     IN        CNAME service
 smokeping               86400     IN        CNAME service
 www                     86400     IN        CNAME service
 ; ##### Meshviewer
-mesh                    86400	  IN	    CNAME service
-mash                    86400	  IN   	    CNAME service
+mesh                    86400	    IN	      CNAME service
+mash                    86400	    IN   	    CNAME service
 www.mesh                86400     IN        CNAME service
 alfred                  86400     IN        CNAME service
 hopglass                86400     IN        CNAME service
@@ -56,6 +67,11 @@ ntp.services            86400     IN        CNAME gw01
                                             CNAME gw03
                                             CNAME gw04
                                             CNAME gw05
+                                            CNAME gw06
+                                            CNAME gw07
+                                            CNAME gw08
+                                            CNAME gw09
+                                            CNAME gw10
 
 
 
@@ -73,11 +89,16 @@ next-node               86400     IN        CNAME node
 nextnode                86400     IN        CNAME node
 
 ; ##### Nameserver
-ns1                     86400     IN        CNAME gw1
-ns2                     86400     IN        CNAME gw2
-ns3                     86400     IN        CNAME gw3
-ns4                     86400     IN        CNAME gw4
-ns5                     86400     IN        CNAME gw5
+ns1                     86400     IN        CNAME gw01
+ns2                     86400     IN        CNAME gw02
+ns3                     86400     IN        CNAME gw03
+ns4                     86400     IN        CNAME gw04
+ns5                     86400     IN        CNAME gw05
+ns6                     86400     IN        CNAME gw06
+ns7                     86400     IN        CNAME gw07
+ns8                     86400     IN        CNAME gw08
+ns9                     86400     IN        CNAME gw09
+ns10                    86400     IN        CNAME gw10
 
 
 ; ##### PGP
