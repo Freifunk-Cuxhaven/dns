@@ -10,26 +10,16 @@ $ORIGIN ffcux.
 ; ##### GWs
 gw01                    86400     IN        A     10.115.0.1
                                             AAAA  fdec:c0f1:afda::ff01
-gw02                    86400     IN        A     10.115.3.1
+gw02                    86400     IN        A     10.115.2.1
                                             AAAA  fdec:c0f1:afda::ff02
-gw03                    86400     IN        A     10.115.6.1
+gw03                    86400     IN        A     10.115.4.1
                                             AAAA  fdec:c0f1:afda::ff03
-gw04                    86400     IN        A     10.115.9.1
+gw04                    86400     IN        A     10.115.6.1
                                             AAAA  fdec:c0f1:afda::ff04
-gw05                    86400     IN        A     10.115.12.1
+gw05                    86400     IN        A     10.115.8.1
                                             AAAA  fdec:c0f1:afda::ff05
-gw06                    86400     IN        A     10.115.15.1
-                                            AAAA  fdec:c0f1:afda::ff06
-gw07                    86400     IN        A     10.115.18.1
-                                            AAAA  fdec:c0f1:afda::ff07
-gw08                    86400     IN        A     10.115.21.1
-                                            AAAA  fdec:c0f1:afda::ff08
-gw09                    86400     IN        A     10.115.24.1
-                                            AAAA  fdec:c0f1:afda::ff09
-gw10                    86400     IN        A     10.115.27.1
-                                            AAAA  fdec:c0f1:afda::ff10
-                                            
 
+                                            
 
 ; ##### service.ffcux.de
 service                 86400     IN        A     10.115.31.1
@@ -67,12 +57,6 @@ ntp.services            86400     IN        CNAME gw01
                                             CNAME gw03
                                             CNAME gw04
                                             CNAME gw05
-                                            CNAME gw06
-                                            CNAME gw07
-                                            CNAME gw08
-                                            CNAME gw09
-                                            CNAME gw10
-
 
 
 
@@ -94,11 +78,7 @@ ns2                     86400     IN        CNAME gw02
 ns3                     86400     IN        CNAME gw03
 ns4                     86400     IN        CNAME gw04
 ns5                     86400     IN        CNAME gw05
-ns6                     86400     IN        CNAME gw06
-ns7                     86400     IN        CNAME gw07
-ns8                     86400     IN        CNAME gw08
-ns9                     86400     IN        CNAME gw09
-ns10                    86400     IN        CNAME gw10
+
 
 
 ; ##### PGP
