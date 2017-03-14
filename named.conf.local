@@ -6,5 +6,5 @@
 // organization
 //include "/etc/bind/zones.rfc1918";
 
-zone "ffcux" {type master; file "/etc/bind/db.ffcux";};
-zone "10.115.in-addr.arpa" {type master; file "/etc/bind/10.115.zone";};
+zone "ffcux" {type master; file "/etc/powerdns/dns_ffcux/db.ffcux";};
+zone "10.115.in-addr.arpa" {type master; file "/etc/powerdns/dns_ffcux/10.115.zone";};
