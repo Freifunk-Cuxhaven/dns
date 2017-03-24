@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # hop into correct directory to avoid cron pwd sucks
-cd /etc/bind/dns_ffcux/
+cd /etc/powerdns/dns_ffcux/
 
 # function to get the current sha-1
 getCurrentVersion() {
