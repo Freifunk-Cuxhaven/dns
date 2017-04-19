@@ -3,7 +3,7 @@
 ;;
 $TTL 2D
 @       IN      SOA     service.ffcux. mail.domainname. (
-                                	       7      ; Serial
+                                	       8      ; Serial
                                         8H      ; Refresh
                                         2H      ; Retry
                                         4W      ; Expire
@@ -13,7 +13,7 @@ $TTL 2D
 
 ; gateways
 0.1    	IN     	PTR   	gw01.ffcux.
-1.1   	IN    	PTR   	gw02.ffcux.
-2.1     IN      PTR     gw03.ffcux.
-3.1     IN      PTR     gw04.ffcux.
-4.1     IN      PTR     gw05.ffcux.
+2.1   	IN    	PTR   	gw02.ffcux.
+4.1     IN      PTR     gw03.ffcux.
+6.1     IN      PTR     gw04.ffcux.
+8.1     IN      PTR     gw05.ffcux.
