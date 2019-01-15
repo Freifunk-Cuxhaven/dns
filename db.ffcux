@@ -5,6 +5,7 @@ $ORIGIN ffcux.
                                   IN        NS    gw03
                                   IN        NS    gw04
                                   IN        NS    gw05
+                                  IN        NS    gw06                                  
 
 
 ; ##### GWs
@@ -18,6 +19,8 @@ gw04                    86400     IN        A     10.115.3.1
                                             AAAA  fdec:c0f1:afda::ff04
 gw05                    86400     IN        A     10.115.4.1
                                             AAAA  fdec:c0f1:afda::ff05
+gw06                    86400     IN        A     10.115.5.1
+                                            AAAA  fdec:c0f1:afda::ff06
 
                                             
 
