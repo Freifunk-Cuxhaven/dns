@@ -68,8 +68,7 @@ opkg.services           86400     IN        CNAME services
 repository              86400     IN        CNAME opkg.services
 
 ; ##### Next-Node
-node                    86400     IN        A     10.115.31.254
-                                            AAAA  fdec:c0f1:afda::ffff
+node                    86400     IN        AAAA  fdec:c0f1:afda::127
 local-node              86400     IN        CNAME node
 localnode               86400     IN        CNAME node
 next-node               86400     IN        CNAME node
