@@ -1,32 +1,8 @@
 $TTL 86400
 $ORIGIN ffcux.
-@                                 IN        SOA   gw01
-                                  IN        NS	  gw02
-                                  IN        NS    gw03
-                                  IN        NS    gw04
-                                  IN        NS    gw05
-                                  IN        NS    gw06                                  
-
-
-; ##### GWs
-gw01                    86400     IN        A     10.115.0.1
-                                            AAAA  fdec:c0f1:afda::ff01
-gw02                    86400     IN        A     10.115.1.1
-                                            AAAA  fdec:c0f1:afda::ff02
-gw03                    86400     IN        A     10.115.2.1
-                                            AAAA  fdec:c0f1:afda::ff03
-gw04                    86400     IN        A     10.115.3.1
-                                            AAAA  fdec:c0f1:afda::ff04
-gw05                    86400     IN        A     10.115.4.1
-                                            AAAA  fdec:c0f1:afda::ff05
-gw06                    86400     IN        A     10.115.5.1
-                                            AAAA  fdec:c0f1:afda::ff06
-
-                                            
-
+        
 ; ##### service.ffcux.de
-service                 86400     IN        A     10.115.31.1
-                                            AAAA  fdec:c0f1:afda:0000:ffff:ffff:ffff:ffff
+service                 86400     IN        A     194.50.19.81
 redmine                 86400     IN        CNAME service
 updates      		        86400     IN        CNAME service
 status                  86400     IN        CNAME service
@@ -51,17 +27,8 @@ hopglass                86400     IN        CNAME service
 ; ##### Verlaeufe
 grafana                 86400     IN        CNAME service
 
-
 ; ##### buildserver
 firmware                86400     IN        CNAME service
-; ##### NTP
-ntp.services            86400     IN        CNAME gw01
-                                            CNAME gw02
-                                            CNAME gw03
-                                            CNAME gw04
-                                            CNAME gw05
-
-
 
 ; ##### OpenWrt Repos
 opkg.services           86400     IN        CNAME services
@@ -73,18 +40,5 @@ local-node              86400     IN        CNAME node
 localnode               86400     IN        CNAME node
 next-node               86400     IN        CNAME node
 nextnode                86400     IN        CNAME node
-
-; ##### Nameserver
-ns1                     86400     IN        CNAME gw01
-ns2                     86400     IN        CNAME gw02
-ns3                     86400     IN        CNAME gw03
-ns4                     86400     IN        CNAME gw04
-ns5                     86400     IN        CNAME gw05
-
-
-
-; ##### PGP
-pgp                     86400     IN        CNAME service
-
 
 
