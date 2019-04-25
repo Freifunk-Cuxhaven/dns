@@ -1,44 +1,52 @@
 $TTL 86400
 $ORIGIN ffcux.
-        
-; ##### service.ffcux.de
-service                 86400     IN        A     194.50.19.81
-redmine                 86400     IN        CNAME service
-updates      		        86400     IN        CNAME service
-status                  86400     IN        CNAME service
-wiki                    86400     IN        CNAME service
-www.wiki                86400     IN        CNAME service
-map                     86400     IN        CNAME service
-git                     86400     IN        CNAME service
-graph                   86400     IN        CNAME service
-gluon                   86400     IN        CNAME service
-www.gluon               86400     IN        CNAME service
-debian                  86400     IN        CNAME service
-monitoring              86400     IN        CNAME service
-smokeping               86400     IN        CNAME service
-www                     86400     IN        CNAME service
-; ##### Meshviewer
-mesh                    86400	    IN	      CNAME service
-mash                    86400	    IN   	    CNAME service
-www.mesh                86400     IN        CNAME service
-alfred                  86400     IN        CNAME service
-hopglass                86400     IN        CNAME service
-
-; ##### Verlaeufe
-grafana                 86400     IN        CNAME service
-
-; ##### buildserver
-firmware                86400     IN        CNAME service
-
-; ##### OpenWrt Repos
-opkg.services           86400     IN        CNAME services
-repository              86400     IN        CNAME opkg.services
-
-; ##### Next-Node
-node                    86400     IN        AAAA  fdec:c0f1:afda::127
-local-node              86400     IN        CNAME node
-localnode               86400     IN        CNAME node
-next-node               86400     IN        CNAME node
-nextnode                86400     IN        CNAME node
-
-
+;                                                 primary-master admin-mail
+@                                 IN        SOA   00.ffcux. gateway@ffcux.net. (
+                                  2019030401 ; serial
+                                  1h         ; refresh
+                                  15m        ; retry
+                                  1w         ; expire
+                                  1d)        ; ttl
+; Nameserver
+                                 IN		NS    01.gw
+                                 IN		NS    02.gw
+                                 IN		NS    03.gw
+                                 IN		NS    04.gw
+                                 IN		NS    karte
+				 IN		NS	map
+				  
+; Hosts
+01.gw                    86400    IN		A     	10.115.0.1
+                                    		AAAA  fdec:c0f1:afda::ff01
+02.gw                    86400    IN		A     	10.115.0.2
+                                    		AAAA  fdec:c0f1:afda::ff02
+03.gw                    86400    IN		A     	10.115.0.3
+                                    		AAAA  fdec:c0f1:afda::ff03
+04.gw                    86400    IN		A     	10.115.0.4
+						AAAA  fdec:c0f1:afda::ff04
+05.gw                    86400    IN		A     	10.115.0.5
+						AAAA  fdec:c0f1:afda::ff05
+map	                 86400     IN		A     	10.115.0.10
+                                     		AAAA  fdec:c0f1:afda::ff10
+; NTP Server
+01.ntp.services          86400     IN		A     	10.115.0.1
+                                     		AAAA  fdec:c0f1:afda::ff01
+02.ntp.services          86400     IN		A     	10.115.0.2
+                                     		AAAA  fdec:c0f1:afda::ff02
+03.ntp.services          86400     IN		A     	10.115.0.3
+                                     		AAAA  fdec:c0f1:afda::ff03
+04.ntp.services          86400     IN		A     	10.115.0.4
+                                     		AAAA  fdec:c0f1:afda::ff04
+05.ntp.services          86400     IN		A     	10.115.0.5
+                                     		AAAA  fdec:c0f1:afda::ff05
+; Update Server
+0.update                 86400     IN		A     	10.115.0.10
+                                     		AAAA  fdec:c0f1:afda::ff10
+; Nextnode
+node			 86400     IN		A     	10.115.63.254
+				     		AAAA  fdec:c0f1:afda::ffff
+						
+local-node               86400     IN		CNAME node
+localnode                86400     IN		CNAME node
+next-node                86400     IN		CNAME node
+nextnode 		 86400 	   IN 		CNAME node
