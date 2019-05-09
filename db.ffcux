@@ -10,10 +10,6 @@ $ORIGIN ffcux.
 ; Nameserver
                                  IN		NS    01.gw
                                  IN		NS    02.gw
-                                 IN		NS    03.gw
-                                 IN		NS    04.gw
-                                 IN		NS    karte
-				 IN		NS	map
 				  
 ; Hosts
 01.gw                    86400    IN		A     	10.115.0.1
