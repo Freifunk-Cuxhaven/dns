@@ -20,28 +20,11 @@ $ORIGIN ffcux.
                                     		AAAA  fdec:c0f1:afda::ff01
 02.gw                    86400    IN		A     	10.115.0.2
                                     		AAAA  fdec:c0f1:afda::ff02
-03.gw                    86400    IN		A     	10.115.0.3
-                                    		AAAA  fdec:c0f1:afda::ff03
-04.gw                    86400    IN		A     	10.115.0.4
-						AAAA  fdec:c0f1:afda::ff04
-05.gw                    86400    IN		A     	10.115.0.5
-						AAAA  fdec:c0f1:afda::ff05
-map	                 86400     IN		A     	10.115.0.10
-                                     		AAAA  fdec:c0f1:afda::ff10
 ; NTP Server
 01.ntp.services          86400     IN		A     	10.115.0.1
                                      		AAAA  fdec:c0f1:afda::ff01
 02.ntp.services          86400     IN		A     	10.115.0.2
                                      		AAAA  fdec:c0f1:afda::ff02
-03.ntp.services          86400     IN		A     	10.115.0.3
-                                     		AAAA  fdec:c0f1:afda::ff03
-04.ntp.services          86400     IN		A     	10.115.0.4
-                                     		AAAA  fdec:c0f1:afda::ff04
-05.ntp.services          86400     IN		A     	10.115.0.5
-                                     		AAAA  fdec:c0f1:afda::ff05
-; Update Server
-0.update                 86400     IN		A     	10.115.0.10
-                                     		AAAA  fdec:c0f1:afda::ff10
 ; Nextnode
 node			 86400     IN		A     	10.115.63.254
 				     		AAAA  fdec:c0f1:afda::ffff
